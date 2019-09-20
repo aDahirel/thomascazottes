@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+<!-- Lien vers le css -->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+<!-- Video Background -->
+<div class="video-background-holder">
+  <div class="video-background-overlay"></div>
+  <video class="video-background" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="Pexels Videos 3665.mp4" type="video/mp4">
+  </video>
+  <div class="video-background-content container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-4">Thomas Cazottes</h1> <!-- Titre -->
+        <p class="lead mb-0">Directeur de la photographie - Chef opérateur</p> <!-- Sous-titre -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Premier paragraphe -->
+<section class="py-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, similique in harum magnam 
+            obcaecati accusamus tempore quia doloremque praesentium et laboriosam labore at necessitatibus dolorum, 
+            eius dolorem dicta fuga voluptas?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
