@@ -33,6 +33,7 @@ class ComposerStaticInit191d5fe5a073ac15cbebb367c50e05c6
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarExporter\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
+            'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
@@ -46,6 +47,7 @@ class ComposerStaticInit191d5fe5a073ac15cbebb367c50e05c6
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
             'Symfony\\Component\\Asset\\' => 24,
+            'Symfony\\Bundle\\WebServerBundle\\' => 31,
             'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
             'Symfony\\Bridge\\Twig\\' => 20,
@@ -129,6 +131,10 @@ class ComposerStaticInit191d5fe5a073ac15cbebb367c50e05c6
         array (
             0 => __DIR__ . '/..' . '/symfony/routing',
         ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
         'Symfony\\Component\\Mime\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
@@ -180,6 +186,10 @@ class ComposerStaticInit191d5fe5a073ac15cbebb367c50e05c6
         'Symfony\\Component\\Asset\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/asset',
+        ),
+        'Symfony\\Bundle\\WebServerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/web-server-bundle',
         ),
         'Symfony\\Bundle\\TwigBundle\\' => 
         array (
