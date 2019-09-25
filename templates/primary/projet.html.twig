@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/projet.css') }}">
+{% endblock %}
+
+{% block body %}
+<!-- Premier paragraphe -->
+<section class="projet-section">
+  <div class="container-project">
+    <div class="div-photos-project">
+    <img class="photos-project" src="https://picsum.photos/1720/720" alt="photos du projet title">
+      <div class="text-project">
+        <h2 class="project-title"> <!-- faire appel a la database --> L'important c'est d'aimer </h2>
+        <p class="project-real"> <!-- faire appel a la database --> by Thomas Cazottes</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
