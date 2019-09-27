@@ -1,0 +1,10 @@
+.footer-container {
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+}
+
+.dev-by {
+  color: #fff;
+  font-size: 1em;
+}
