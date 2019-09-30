@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">C:\CODE\thomascazottes\src</parameter>
-    <parameter key="kernel.project_dir">C:\CODE\thomascazottes</parameter>
+    <parameter key="kernel.root_dir">/Applications/mamp/htdocs/thomascazottes/src</parameter>
+    <parameter key="kernel.project_dir">/Applications/mamp/htdocs/thomascazottes</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
-    <parameter key="kernel.cache_dir">C:\CODE\thomascazottes\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\CODE\thomascazottes\var\log</parameter>
+    <parameter key="kernel.cache_dir">/Applications/mamp/htdocs/thomascazottes/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/Applications/mamp/htdocs/thomascazottes/var/log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
@@ -16,19 +16,19 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\CODE\thomascazottes\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">/Applications/mamp/htdocs/thomascazottes/vendor/symfony/framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">C:\CODE\thomascazottes\vendor\sensio\framework-extra-bundle</parameter>
+        <parameter key="path">/Applications/mamp/htdocs/thomascazottes/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">C:\CODE\thomascazottes\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">/Applications/mamp/htdocs/thomascazottes/vendor/symfony/twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
-        <parameter key="path">C:\CODE\thomascazottes\vendor\symfony\web-server-bundle</parameter>
+        <parameter key="path">/Applications/mamp/htdocs/thomascazottes/vendor/symfony/web-server-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
     </parameter>
@@ -51,13 +51,13 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:\CODE\thomascazottes\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">/Applications/mamp/htdocs/thomascazottes/var/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\CODE\thomascazottes\var\cache\dev/srcApp_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">/Applications/mamp/htdocs/thomascazottes/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -69,7 +69,7 @@
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">C:\CODE\thomascazottes/templates</parameter>
+    <parameter key="twig.default_path">/Applications/mamp/htdocs/thomascazottes/templates</parameter>
     <parameter key="console.command.ids" type="collection"/>
   </parameters>
   <services>
@@ -275,14 +275,6 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
-        <argument>console.command</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
         <argument>kernel.exception</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
@@ -402,7 +394,7 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate" public="true">
       <argument type="tagged" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged" tag="kernel.cache_clearer"/>
@@ -411,9 +403,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem" public="true"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>C:\CODE\thomascazottes\src/Resources</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/src/Resources</argument>
       <argument type="collection">
-        <argument>C:\CODE\thomascazottes\src</argument>
+        <argument>/Applications/mamp/htdocs/thomascazottes/src</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner" public="false">
@@ -483,7 +475,7 @@
     <service id="console.command.assets_install" class="Symfony\Bundle\FrameworkBundle\Command\AssetsInstallCommand" public="false">
       <tag name="console.command" command="assets:install"/>
       <argument type="service" id="filesystem"/>
-      <argument>C:\CODE\thomascazottes</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -596,9 +588,9 @@
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>o1DRj1hcvz</argument>
+      <argument>X4OaEomXZl</argument>
       <argument>0</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -614,59 +606,59 @@
     <service id="cache.system" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>Po1944rmrh</argument>
+      <argument>hTrybXgnu2</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>+hGQJ2shMi</argument>
+      <argument>WP8ooxUQXH</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>jLiCiOlepR</argument>
+      <argument>OEhWt3fH-X</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>zQQIpFjlT4</argument>
+      <argument>DfOR5tybKh</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>yMVsBtT8BB</argument>
+      <argument>VqN7k-lkiF</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.messenger.restart_workers_signal" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>DxlyIViGPZ</argument>
+      <argument>fi2Liuvi2E</argument>
       <argument>0</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -678,7 +670,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -707,7 +699,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/pools</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -794,8 +786,8 @@
         <argument key="cache.messenger.restart_workers_signal" type="service" id="cache.messenger.restart_workers_signal" on-invalid="ignore_uninitialized"/>
       </argument>
     </service>
-    <service id=".1_NativeFileSessionHandler~ZSVWW50" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>C:\CODE\thomascazottes\var\cache\dev/sessions</argument>
+    <service id=".1_NativeFileSessionHandler~qQD8aMr" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -818,12 +810,12 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>C:\CODE\thomascazottes\var\cache\dev/sessions</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id=".1_NativeFileSessionHandler~ZSVWW50"/>
+      <argument type="service" id=".1_NativeFileSessionHandler~qQD8aMr"/>
     </service>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -966,7 +958,7 @@
       <argument type="service" id=".service_locator.MAfdX1A.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\CODE\thomascazottes\var\cache\dev</argument>
+        <argument key="cache_dir">/Applications/mamp/htdocs/thomascazottes/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -1005,7 +997,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>C:\CODE\thomascazottes</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1031,12 +1023,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id=".2_PhpArrayAdapter~uXwKUx6" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:\CODE\thomascazottes\var\cache\dev/annotations.php</argument>
+    <service id=".2_PhpArrayAdapter~yoL0xGH" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id=".1_ArrayCache~uXwKUx6" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id=".1_ArrayCache~yoL0xGH" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -1051,7 +1043,7 @@
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <tag name="annotations.cached_reader"/>
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~uXwKUx6"/>
+      <argument type="service" id=".1_ArrayCache~yoL0xGH"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -1061,12 +1053,12 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:\CODE\thomascazottes\var\cache\dev/annotations.php</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache/dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!AbstractController$|Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~uXwKUx6"/>
+      <argument type="service" id=".2_PhpArrayAdapter~yoL0xGH"/>
     </service>
     <service id="mime_types" class="Symfony\Component\Mime\MimeTypes" public="false">
       <call method="setDefault">
@@ -1130,7 +1122,7 @@
     <service id="twig" class="Twig\Environment" public="true">
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
-        <argument key="default_path">C:\CODE\thomascazottes/templates</argument>
+        <argument key="default_path">/Applications/mamp/htdocs/thomascazottes/templates</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
         <argument key="exception_controller">twig.controller.exception::showAction</argument>
@@ -1138,7 +1130,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:\CODE\thomascazottes\var\cache\dev/twig</argument>
+        <argument key="cache">/Applications/mamp/htdocs/thomascazottes/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -1208,9 +1200,9 @@
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>C:\CODE\thomascazottes\src</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/src</argument>
       <argument type="collection"/>
-      <argument>C:\CODE\thomascazottes/templates</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
@@ -1221,25 +1213,25 @@
     <service id="twig.loader.native_filesystem" class="Symfony\Bundle\TwigBundle\Loader\NativeFilesystemLoader" public="false">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>C:\CODE\thomascazottes</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes</argument>
       <call method="addPath">
-        <argument>C:\CODE\thomascazottes\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>/Applications/mamp/htdocs/thomascazottes/vendor/symfony/framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>C:\CODE\thomascazottes\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>/Applications/mamp/htdocs/thomascazottes/vendor/symfony/framework-bundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>C:\CODE\thomascazottes\vendor\symfony\twig-bundle/Resources/views</argument>
+        <argument>/Applications/mamp/htdocs/thomascazottes/vendor/symfony/twig-bundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>C:\CODE\thomascazottes\vendor\symfony\twig-bundle/Resources/views</argument>
+        <argument>/Applications/mamp/htdocs/thomascazottes/vendor/symfony/twig-bundle/Resources/views</argument>
         <argument>!Twig</argument>
       </call>
       <call method="addPath">
-        <argument>C:\CODE\thomascazottes/templates</argument>
+        <argument>/Applications/mamp/htdocs/thomascazottes/templates</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -1265,7 +1257,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>C:\CODE\thomascazottes</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -1325,10 +1317,10 @@
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
       <argument type="service" id="twig"/>
-      <argument>C:\CODE\thomascazottes</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>C:\CODE\thomascazottes/templates</argument>
-      <argument>C:\CODE\thomascazottes\src</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/templates</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/src</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -1343,32 +1335,32 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
-      <argument>C:\CODE\thomascazottes/public</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/public</argument>
       <argument>dev</argument>
-      <argument>C:\CODE\thomascazottes\var\cache</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache</argument>
       <call method="setName">
         <argument>server:run</argument>
       </call>
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command" command="server:start"/>
-      <argument>C:\CODE\thomascazottes/public</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/public</argument>
       <argument>dev</argument>
-      <argument>C:\CODE\thomascazottes\var\cache</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache</argument>
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
       <tag name="console.command" command="server:stop"/>
-      <argument>C:\CODE\thomascazottes\var\cache</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache</argument>
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command" command="server:status"/>
-      <argument>C:\CODE\thomascazottes\var\cache</argument>
+      <argument>/Applications/mamp/htdocs/thomascazottes/var/cache</argument>
       <call method="setName">
         <argument>server:status</argument>
       </call>
