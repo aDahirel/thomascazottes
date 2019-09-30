@@ -1,12 +1,13 @@
 {% extends "base.html.twig" %}
 
 {% block stylesheets %}
-<!-- Lien vers le css -->
+<!-- CSS LINK -->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
 {% endblock %}
 
 {% block body %}
-<!-- Video Background -->
+
+<!-- VIDEO BACKGROUND -->
 <header class="v-header container">
     <div class="fullscreen-video-wrap">
       <video src="pexels.mov" autoplay="true" loop="true" muted>
@@ -19,7 +20,9 @@
       <a class="btn" href="#ancre">En savoir plus</a>
     </div>
   </header>
-
+   <!-- SECTION NAV -->
+  {%  include "nav/navbar.html.twig" %} 
+  <!-- SECTION BELOW VIDEO -->
   <section class="section section-a" id="ancre">
     <div class="container">
       <h2>Section A</h2>

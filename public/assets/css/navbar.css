@@ -1,0 +1,8 @@
+.navbar
+{
+    z-index: 3;
+    position: sticky;
+    position: -webkit-sticky;
+    width: 100%;
+    top: 0;
+}
