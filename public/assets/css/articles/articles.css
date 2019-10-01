@@ -1,3 +1,37 @@
+/*
+*
+* ==========================================
+* CSS ARTICLES SECTION
+* ==========================================
+*
+*/
+
+.section{
+  padding:20px 0;
+}
+
+.section-b{
+  background:#333;
+  color:#fff;
+}
+
+.section{
+  padding:20px 0;
+}
+
+.section-d{
+  background:#333;
+  color:#fff;
+}
+
+/*
+*
+* ==========================================
+* CSS PROJET SECTION
+* ==========================================
+*
+*/
+
 .projet-section {
   margin: 0;
   position: static;
