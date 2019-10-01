@@ -8,3 +8,10 @@
 \var\cache\dev
 /vendor/
 /.web-server-pid
+###< symfony/web-server-bundle ###
+var/cache/dev/srcApp_KernelDevDebugContainer.php
+var/cache/dev/srcApp_KernelDevDebugContainer.php
+var/cache/dev/srcApp_KernelDevDebugContainer.php
+var/cache/dev/srcApp_KernelDevDebugContainer.php
+var/cache/dev/srcApp_KernelDevDebugContainer.php.meta
+var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta
