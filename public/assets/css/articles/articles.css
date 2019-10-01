@@ -49,8 +49,8 @@
 }
 
 .transition-invert:hover {
-  -webkit-filter: invert(.9);
-  filter: invert(.9);
+  /* -webkit-filter: invert(.9);
+  filter: invert(.9); */
 }
 
 .transition-invert {
