@@ -56,7 +56,7 @@ body{
   width:100vw;
   z-index:1;
   background:#225470;
-  opacity:0.4;
+  opacity:0.45;
 }
 
 .header-content{
@@ -76,44 +76,9 @@ body{
   padding-bottom:2rem;
 }
 
-.btn{
-  background: #34b3a0;
-  color:#fff;
-  font-size:1.2rem;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 @media(max-width:960px){
   .container{
     padding-right:3rem;
     padding-left:3rem;
   }
-}
-
-/*
-*
-* ==========================================
-* CSS ARTICLES SECTION
-* ==========================================
-*
-*/
-
-.section{
-  padding:20px 0;
-}
-
-.section-b{
-  background:#333;
-  color:#fff;
-}
-
-.section{
-  padding:20px 0;
-}
-
-.section-d{
-  background:#333;
-  color:#fff;
 }
