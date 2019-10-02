@@ -1,18 +1,14 @@
-.footer-container {
-  background-color: #000;
-  display: flex;
-  flex-direction: row;
-  height: 5vh;
-  width: 100%
+.footer-background {
+  background-color: black;
 }
 
-.dev-by {
-  color: #fff;
-  font-size: 1em;
-  font-weight: 100;
-}
-
-.footer-link-name {
+.text-footer {
+  color: white;
   text-decoration: none;
-  color: #fff;
+  font-weight: 200;
+}
+
+.text-link:hover {
+  color: red;
+  text-decoration: none;
 }

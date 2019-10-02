@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/articles/articles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/background/video.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/footer/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+{%  include "background/background.html.twig" %}
+{%  include "nav/navbar.html.twig" %}
+{% include "footer/footer.html.twig" %}
+
+
+{% endblock %}

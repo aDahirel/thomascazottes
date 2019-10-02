@@ -49,8 +49,8 @@
 }
 
 .transition-invert:hover {
-  -webkit-filter: invert(.9);
-  filter: invert(.9);
+  /* -webkit-filter: invert(.9);
+  filter: invert(.9); */
 }
 
 .transition-invert {
@@ -81,14 +81,15 @@
 
 .project-real-prod-title {
   color: #fff;
-  bottom: 2em;
+  bottom: 0.5em;
+  left: 1em;
   position: absolute;
   padding: 1px;
 }
 
 .project-title {
   font-size: 2em;
-  margin-bottom: 0.3em;
+  margin: 0;
   font-weight: 500;
 }
 
@@ -96,4 +97,26 @@
   font-size: 1em;
   margin: 0;
   font-weight: 300;
+}
+
+@media(max-width:425px){
+  .text-prod-real {
+    font-size: 0.7em;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .project-real-prod-title {
+    color: #fff;
+    bottom: 0.5em;
+    left: 1em;
+    position: absolute;
+    padding: 1px;
+  }
+
+  .project-title {
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: 500;
+  }
 }
