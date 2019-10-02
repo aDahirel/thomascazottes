@@ -14,4 +14,12 @@ class MainController extends Controller
     {
         return $this->render('primary/home.html.twig');
     }
+
+    /**
+     * @Route("/gallery")
+     */
+    public function gallery()
+    {
+        return $this->render('gallery/gallery.html.twig');
+    }
 }
