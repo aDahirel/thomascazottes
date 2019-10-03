@@ -35,3 +35,11 @@ vendor/composer/autoload_static.php
 vendor/composer/ClassLoader.php
 vendor/composer/installed.json
 vendor/composer/LICENSE
+var/cache/dev/srcApp_KernelDevDebugContainer.php
+var/cache/dev/srcApp_KernelDevDebugContainer.php.meta
+var/cache/dev/srcApp_KernelDevDebugContainer.xml
+var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta
+var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log
+var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log
+var/cache/dev/UrlMatcher.php
+var/cache/dev/UrlMatcher.php.meta

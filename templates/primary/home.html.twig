@@ -1,20 +1,25 @@
 {% extends "base.html.twig" %}
 
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/articles/articles.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/background/video.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/articles/articles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/contact/contact.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/footer/footer.css') }}">
 {% endblock %}
 
 {% block body %}
+<!-- BALISE POUR L'ANCRE-->
+<div id="ancre_home"></div>
 <!-- VIDEO BACKGROUND -->
-{%  include "background/background.html.twig" %} 
-<!-- BALISE POUR L'ANCRE -->
+{%  include "background/background.html.twig" %}
+<!-- BALISE POUR L'ANCRE ACCUEIL-->
 <div id="ancre"></div>
 <!-- SECTION NAV -->
 {%  include "nav/navbar.html.twig" %} 
 <!-- SECTION ARTICLES -->
-{% include "articles/articles.html.twig" %}
+{%  include "articles/articles.html.twig" %}
+<!-- SECTION CONTACT -->
+{%  include "contact/contact.html.twig" %} 
 <!-- SECTION FOOTER -->
 {% include "footer/footer.html.twig" %}
 {% endblock %}
