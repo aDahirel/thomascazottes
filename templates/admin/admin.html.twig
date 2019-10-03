@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/admin/admin.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+        {# Main title #}
+        <h1 class="m-5 text-uppercase">Bon retour Thomas !</h1>
+        {# Modify an article #}
+        <button type="button" class="btn btn-dark btn-lg m-3">Gestion des articles</button><br>
+        {# Modify the gallery #}
+        <a href="/gallerymodify"><button type="button" class="btn btn-dark btn-lg m-3">Gestion de la galerie</button></a><hr>
+        {# Log out button #}
+        <a href="/logout">
+            <button type="button" class="btn btn-dark btn-lg align-center m-3">Log Out</button>
+        </a>
+    </div>
+{% endblock %}

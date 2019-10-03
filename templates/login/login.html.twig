@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+{% block body %}
+{#
+  - if error
+  - translate the error message
+#}
+{% if error %}
+<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+{#
+  Login form
+#}
+<form action="{{ path('login') }}" method="post"
+  style="padding-left: 20%;padding-right: 20%;padding-top: 3%;padding-bottom: 3%;">
+  <fieldset>
+    <legend>Connexion</legend>
+    <hr>
+    <div class="form-group">
+      <label for="username">Login</label>
+      <input type="text" class="form-control" id="username" placeholder="Login" name="_username">
+    </div>
+    <div class="form-group">
+      <label for="password">Mot de passe</label>
+      <input type="password" class="form-control" id="password" name="_password" placeholder="Mot de passe">
+    </div>
+    {#
+      URL Where the user is redirected
+    #}
+    <input type="hidden" name="_target_path" value="/admin" />
+
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </fieldset>
+</form>
+<div class="text-center">
+  <a href="/"><button type="submit" class="btn btn-dark align-center" style="margin-bottom: 1.5rem;">Retour</button></a>
+</div>
+{% endblock %}

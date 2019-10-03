@@ -1,0 +1,10 @@
+body{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.wrapper{
+    display: flex;
+  justify-content: center;
+}
