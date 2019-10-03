@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<div class="container">
+    <h1 style="margin-top: 5%;">Galerie</h1>
+        <form>
+            <fieldset>
+                <legend>Ajouter une photographie</legend>
+                <div class="form-group">
+                    <label for="username">Titre</label>
+                    <input type="text" class="form-control" id="username" placeholder="Titre" name="_gallerytittle">
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </fieldset>
+        </form>
+        {# Return button #}
+        <div class="text-center">
+            <a href="/admin">
+                <button type="button" class="btn btn-dark btn-lg align-center m-3">Retour</button>
+            </a>
+        </div>
+</div>
+    
+{% endblock %}
