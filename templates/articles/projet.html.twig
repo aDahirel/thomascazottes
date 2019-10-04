@@ -15,14 +15,17 @@
   <iframe src='https://www.dailymotion.com/embed/video/x74thp7' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </div>
 
-{% for i in 0..2 %}
-<section class="projet-section article-image">
-  <div class="container-project transition-invert">
-    <div class="div-photos-project">
-      <img class="photos-project" src="PORTFOLIO PDF.jpg" alt="photos du projet title"> <!-- faire appel a la database -->
-    </div>
+{% for i in 0..3 %}
+{% if  i is divisible by(2) %} {# have to be debug because modulo doesnt work #}
+  <div class="container-image-projet img-droite">
+    <img class="image-projet" src="PORTFOLIO PDF.jpg" alt="">
   </div>
-</section>
+{% else %}
+  <div class="container-image-projet img-gauche">
+    <img class="image-projet" src="PORTFOLIO PDF.jpg" alt="">
+  </div>
+
+{% endif %}
 {% endfor %}
 
 
