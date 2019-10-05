@@ -1,7 +1,7 @@
 /*
 *
 * ==========================================
-* CSS VIDEO TOP
+* CSS VIDEO TOP FOR PROJECT PAGE
 * ==========================================
 *
 */
@@ -24,31 +24,189 @@
 /*
 *
 * ==========================================
+* CSS TEXT
+* ==========================================
+*
+*/
+.information-projet {
+  color: white;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.information-projet-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projet-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.titre-projet-list {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.texte-projet-list {
+  font-size: 1em;
+  font-weight: 100;
+  color: grey;
+}
+
+.intro-text-projet {
+  border-top: solid;
+  padding-top: 1em;
+  text-align: center;
+}
+
+
+
+
+/*
+*
+* ==========================================
 * CSS IMAGES
 * ==========================================
 *
 */
+
 body{
-  background-color: #343a40;
+  background-color: black;
+/*  background-color: red; */
+}
+
+.container-projet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-images {
+  margin-top: -9%;
 }
 
 .container-image-projet {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 2%;
 }
 
 .image-projet {
-  margin-bottom: 10px;
-  height: 90%;
-  width:95%;
+  width: 80%;
+  height: auto;
+}
+
+.img-droite {
+  text-align: right;
+  padding-right: 2%;
+  flex-wrap: nowrap;
 }
 
 .img-gauche {
-  margin-left: 0;
+  text-align: left;
+  padding-left: 2%;
+  flex-wrap: nowrap;
 }
 
-.img-droite{
-  margin-right: 0;
+@media(max-width:425px){
+  .image-projet {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-droite {
+    text-align: center;
+    padding: 0;
+  }
+
+  .img-gauche {
+    text-align: center;
+    padding: 0;
+  }
 }
+
+/*
+*
+* ==========================================
+* CSS ANIMATION IMAGES
+* ==========================================
+*
+*/
+
+@keyframes animationLeft {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(150px);
+    }
+
+    100% {
+        transform: translateX(150px);
+    }
+}
+
+@-webkit-keyframes animationLeft {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(150px);
+    }
+
+    100% {
+        transform: translateX(150px);
+    }
+}
+/*
+.img-gauche:hover
+{
+    @-webkit-animation: animationLeft 4s alternate;
+    animation: animationLeft 4s alternate;
+}
+*/
+
+@keyframes animationRight {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(0,2);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@-webkit-keyframes animationRight {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(0,-2);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/*
+.img-droite:hover
+{
+    @-webkit-animation: animationLeft 4s alternate;
+    animation: animationLeft 4s alternate;
+}
+*/
