@@ -140,6 +140,7 @@ body{
 *
 */
 
+/*
 @keyframes animationLeft {
     0% {
         transform: translateX(0px);
@@ -167,46 +168,46 @@ body{
         transform: translateX(150px);
     }
 }
-/*
+
 .img-gauche:hover
 {
     @-webkit-animation: animationLeft 4s alternate;
     animation: animationLeft 4s alternate;
 }
-*/
+
 
 @keyframes animationRight {
     0% {
-        transform: translate(0);
+        transform: translateX(0px);
     }
 
     50% {
-        transform: translate(0,2);
+        transform: translateX(-150px);
     }
 
     100% {
-        transform: translate(0);
+        transform: translateX(0px);
     }
 }
 
 @-webkit-keyframes animationRight {
     0% {
-        transform: translate(0);
+        transform: translateX(0px);
     }
 
     50% {
-        transform: translate(0,-2);
+        transform: translateX(-150px);
     }
 
     100% {
-        transform: translate(0);
+        transform: translateX(-150px);
     }
 }
 
-/*
+
 .img-droite:hover
 {
-    @-webkit-animation: animationLeft 4s alternate;
-    animation: animationLeft 4s alternate;
+    @-webkit-animation: animationRight 4s linear 1s infinite alternate;
+    animation: animationRight 4s alternate;
 }
 */
