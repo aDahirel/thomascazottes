@@ -18,6 +18,7 @@ return [
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
     'gallery' => [[], ['_controller' => 'App\\Controller\\MainController::gallery'], [], [['text', '/gallery']], [], []],
+    'projet' => [[], ['_controller' => 'App\\Controller\\MainController::projet'], [], [['text', '/projet']], [], []],
     'manage_gallery' => [[], ['_controller' => 'App\\Controller\\MainController::modify_gallery'], [], [['text', '/gallerymodify']], [], []],
     'show' => [['id'], ['_controller' => 'App\\Controller\\MainController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/show']], [], []],
     'user_registration' => [[], ['_controller' => 'App\\Controller\\SecurityController::register'], [], [['text', '/register']], [], []],

@@ -32,6 +32,15 @@ class MainController extends Controller
     }
 
     /**
+     * @Route("/projet", name="projet")
+     */
+    public function projet()
+    {
+        // Redirecting to the projet page when calling to the function
+        return $this->render('articles/projet.html.twig');
+    }
+
+    /**
      * @Route("/gallerymodify", name="manage_gallery")
      */
     public function modify_gallery()

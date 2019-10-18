@@ -1,14 +1,91 @@
 {% extends "base.html.twig" %}
 <!-- Link to the css -->
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/articles/articles.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/background/video.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/contact/contact.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/footer/footer.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/articles/projet.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/articles/articles.css') }}">
+
 {% endblock %}
 
 {% block body %}
+
 <!-- Including the files -->
 {% include "background/background.html.twig" %}
 {% include "nav/navbar.html.twig" %}
+{% include "footer/footer.html.twig" %}
+{% include "nav/navbar.html.twig" %}
+
+<div class="container-projet">
+
+  <div class='embed-container'>
+    <iframe src='https://www.dailymotion.com/embed/video/x74thp7' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+
+  <div class="container-images">
+
+    <div class="container-image-projet img-droite">
+      <img class="image-projet" src="2.jpg" alt="">
+    </div>
+
+    <div class="container-image-projet img-gauche">
+      <img class="image-projet" src="3.jpg" alt="">
+    </div>
+
+    <div class="container-image-projet img-droite">
+      <img class="image-projet" src="4.jpg" alt="">
+    </div>
+
+    <div class="container-image-projet img-gauche">
+      <img class="image-projet" src="PORTFOLIO PDF.jpg" alt="">
+    </div>
+
+  </div>
+
+</div>
+
+<div class="information-projet">
+
+
+  <p class="intro-text-projet">
+  Exercice adaptation extrait "L’important c'est d'aimer" Christopher Franck – Andrzej Zulawski
+  Dirigé par Pierre-William Glenn et Alexandre Marquand - 2018-BTS audiovisuel de Cannes -
+  </p>
+
+  <div class="information-projet-list">
+
+    <ul class="projet-list">
+      <li class="titre-projet-list">Cast :</li>
+      <ul class="projet-list">
+        <li class="texte-projet-list" >Directeur photographie: Thomas Cazottes </li>
+        <li class="texte-projet-list">Acting : Ludivine Colle et Michael Sisowath</li>
+        <li class="texte-projet-list">Cadreurs : Emile Tornior, Pierre Bonnafé</li>
+        <li class="texte-projet-list">Assist Caméra : Gaspard Soboul, Pierre Frink</li>
+        <li class="texte-projet-list">Eletriciens: Gaétan Berteaux, Nina Chiron</li>
+      </ul>
+    </ul>
+
+    <ul class="projet-list">
+      <li class="titre-projet-list" >Information matériel :</li>
+      <ul class="projet-list">
+        <li class="texte-projet-list">Caméra A : Varicam LT ISO 800 V-log optique : CineAlta 50mm-85mm </li>
+        <li class="texte-projet-list">Caméra B : Eva 1 ISO 800 V-log  optique SIGMA HIGHT SPEED ZOOM 18-35mm</li>
+        <li class="texte-projet-list">Machinerie : Panthers S3 dolly</li>
+      </ul>
+    </ul>
+
+    <ul class="projet-list">
+      <li class="titre-projet-list" >Information matériel :</li>
+      <ul class="projet-list">
+        <li class="texte-projet-list">Caméra A : Varicam LT ISO 800 V-log optique : CineAlta 50mm-85mm </li>
+        <li class="texte-projet-list">Caméra B : Eva 1 ISO 800 V-log  optique SIGMA HIGHT SPEED ZOOM 18-35mm</li>
+        <li class="texte-projet-list">Machinerie : Panthers S3 dolly</li>
+      </ul>
+    </ul>
+
+  </div>
+
+</div>
+
 {% include "footer/footer.html.twig" %}
 {% endblock %}

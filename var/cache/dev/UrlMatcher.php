@@ -16,6 +16,7 @@ return [
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\MainController::index'], null, null, null, false, false, null]],
         '/gallery' => [[['_route' => 'gallery', '_controller' => 'App\\Controller\\MainController::gallery'], null, null, null, false, false, null]],
+        '/projet' => [[['_route' => 'projet', '_controller' => 'App\\Controller\\MainController::projet'], null, null, null, false, false, null]],
         '/gallerymodify' => [[['_route' => 'manage_gallery', '_controller' => 'App\\Controller\\MainController::modify_gallery'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'user_registration', '_controller' => 'App\\Controller\\SecurityController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
