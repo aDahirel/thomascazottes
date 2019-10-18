@@ -3,11 +3,16 @@
 namespace App\Controller;
 
 use App\Entity\User;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends Controller
 {
+    //======================================================================
+    // FRONT CONTROLLER
+    //======================================================================
+
     /**
      * @Route("/", name="home")
      */
@@ -22,7 +27,7 @@ class MainController extends Controller
      */
     public function gallery()
     {
-        // Redirecting to the gallery page when calling to the function
+        // Redirecting to the gallery page
         return $this->render('gallery/gallery.html.twig');
     }
 
@@ -31,6 +36,7 @@ class MainController extends Controller
      */
     public function modify_gallery()
     {
+        // Redirecting to the gallery management page
         return $this->render('gallery/manage_gallery.html.twig');
     }
 
@@ -39,7 +45,8 @@ class MainController extends Controller
      */
     public function show(User $user)
     {
-        // Redirecting to the show page when calling to the function
+        // Redirecting to the show page when calling to the function, no entries by buttons or link, 
+        // need to type it directly by the url
         return $this->render('show.html.twig', [
             'user' => $user,
         ]);

@@ -1,12 +1,12 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+<!-- Building form with the previous User object inputs -->
 {{ form_start(form) }}
 {{ form_row(form.username) }}
 {{ form_row(form.plainPassword.first) }}
 {{ form_row(form.plainPassword.second) }}
-
+<!-- Register button -->
 <button type="submit">Register!</button>
 {{ form_end(form) }}
-
 {% endblock %}

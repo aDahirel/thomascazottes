@@ -1,23 +1,28 @@
 {% extends "base.html.twig" %}
+
 {% block body %}
+<!-- GALLERY EDIT -->
 <div class="container">
+    <!-- Primary title -->
     <h1 style="margin-top: 5%;">Galerie</h1>
         <form>
             <fieldset>
+                <!-- Secondary title -->
                 <legend>Ajouter une photographie</legend>
+                <!-- Tile input -->
                 <div class="form-group">
                     <label for="username">Titre</label>
                     <input type="text" class="form-control" id="username" placeholder="Titre" name="_gallerytittle">
                 </div>
+                <!-- Submit button -->
                 <button type="submit" class="btn btn-primary">Envoyer</button>
             </fieldset>
         </form>
-        {# Return button #}
+        <!-- Return button -->
         <div class="text-center">
             <a href="/admin">
                 <button type="button" class="btn btn-dark btn-lg align-center m-3">Retour</button>
             </a>
         </div>
 </div>
-    
 {% endblock %}

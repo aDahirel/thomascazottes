@@ -1,5 +1,5 @@
 {% extends "base.html.twig" %}
-
+<!-- Link to the css -->
 {% block stylesheets %}
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/articles/articles.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/background/video.css') }}">
@@ -7,9 +7,8 @@
 {% endblock %}
 
 {% block body %}
+<!-- Including the files -->
 {% include "background/background.html.twig" %}
 {% include "nav/navbar.html.twig" %}
 {% include "footer/footer.html.twig" %}
-
-
 {% endblock %}
