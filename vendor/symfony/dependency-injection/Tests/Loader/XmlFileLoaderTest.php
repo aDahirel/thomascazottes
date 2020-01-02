@@ -882,7 +882,6 @@ class XmlFileLoaderTest extends TestCase
         $container->compile();
 
         $dumper = new PhpDumper($container);
-        $dump = $dumper->dump();
         $this->assertStringEqualsFile(self::$fixturesPath.'/php/services_tsantos.php', $dumper->dump());
     }
 
@@ -900,5 +899,14 @@ class XmlFileLoaderTest extends TestCase
         (new ResolveBindingsPass())->process($container);
 
         $this->assertSame('overridden', $container->get('bar')->quz);
+    }
+
+    public function testReturnsClone()
+    {
+        $container = new ContainerBuilder();
+        $loader = new XmlFileLoader($container, new FileLocator(self::$fixturesPath.'/xml'));
+        $loader->load('returns_clone.xml');
+
+        $this->assertSame([['bar', [], true]], $container->getDefinition('foo')->getMethodCalls());
     }
 }

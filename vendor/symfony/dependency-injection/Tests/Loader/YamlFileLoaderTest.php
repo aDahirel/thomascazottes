@@ -305,6 +305,12 @@ class YamlFileLoaderTest extends TestCase
 
         $taggedIterator = new TaggedIteratorArgument('foo', 'barfoo', 'foobar', true);
         $this->assertEquals(new ServiceLocatorArgument($taggedIterator), $container->getDefinition('foo_service_tagged_locator')->getArgument(0));
+
+        if (is_subclass_of('Symfony\Component\Yaml\Exception\ExceptionInterface', 'Throwable')) {
+            // this test is not compatible with Yaml v3
+            $taggedIterator = new TaggedIteratorArgument('foo', null, null, true);
+            $this->assertEquals(new ServiceLocatorArgument($taggedIterator), $container->getDefinition('bar_service_tagged_locator')->getArgument(0));
+        }
     }
 
     public function testNameOnlyTagsAreAllowedAsString()
@@ -365,6 +371,9 @@ class YamlFileLoaderTest extends TestCase
         $lazyDefinition = $container->getDefinition('lazy_context');
 
         $this->assertEquals([new IteratorArgument(['k1' => new Reference('foo.baz'), 'k2' => new Reference('service_container')]), new IteratorArgument([])], $lazyDefinition->getArguments(), '->load() parses lazy arguments');
+
+        $message = 'The "deprecated_service" service is deprecated. You should stop using it, as it will be removed in the future.';
+        $this->assertSame($message, $container->getDefinition('deprecated_service')->getDeprecationMessage('deprecated_service'));
     }
 
     public function testAutowire()
@@ -827,5 +836,18 @@ class YamlFileLoaderTest extends TestCase
         $iteratorArgument = $container->getDefinition('iterator_service')->getArgument(0);
         $this->assertInstanceOf(TaggedIteratorArgument::class, $iteratorArgument);
         $this->assertNull($iteratorArgument->getIndexAttribute());
+    }
+
+    public function testReturnsClone()
+    {
+        $container = new ContainerBuilder();
+        $loader = new YamlFileLoader($container, new FileLocator(self::$fixturesPath.'/yaml'));
+        $loader->load('returns_clone.yaml');
+
+        $expected = [
+            ['bar', [1], true],
+            ['bar', [2], true],
+        ];
+        $this->assertSame($expected, $container->getDefinition('foo')->getMethodCalls());
     }
 }
