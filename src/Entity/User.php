@@ -1,8 +1,9 @@
 <?php
-
+// src/Entity/User.php
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -13,17 +14,16 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface
 {
+    //======================================================================
+    // ATTRIBUTS
+    //======================================================================
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
@@ -50,9 +50,19 @@ class User implements UserInterface
      */
     private $roles;
 
+    //======================================================================
+    // GETTERS & SETTERS
+    //======================================================================
+
+    // Constructor
     public function __construct()
     {
         $this->roles = array('ROLE_ADMIN');
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 
     public function getUsername()
